@@ -1,0 +1,18 @@
+<h1>Teams</h1>
+
+<% @teams.each do |team| %>
+<p>
+  <b><%= team.name %></b>
+  <br/><%= team.city %>
+  <br/><%= team.coach %>
+
+  <p>
+  --- Players ---
+  <% team.players.each do |player| %>
+    <br/>• <%= player.name %>
+          (<%= player.position %>)
+  <% end %>
+  </p>
+</p>
+<% end %>
+
